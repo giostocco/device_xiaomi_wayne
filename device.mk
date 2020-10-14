@@ -24,13 +24,13 @@
 # Inherit from wayne-common
 $(call inherit-product, device/xiaomi/wayne-common/wayne.mk)
 
+DEVICE_PATH := device/xiaomi/wayne
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/xiaomi/wayne/overlay
+    $(DEVICE_PATH)/overlay
 
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom
 
-# Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/wayne/wayne-vendor.mk)
